@@ -16,7 +16,8 @@ namespace Repository.Repositeries.ContentRepositories
         IEnumerable<EECart> GetexpCarts();
         IEnumerable<Service> GetServices();
         IEnumerable<SkillValue> GetSkils();
-      public  Info GetInfos();
+        IEnumerable<Caption> GetCaption();
+        public  Info GetInfos();
 
     }
 }

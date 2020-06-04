@@ -1,0 +1,82 @@
+﻿@model IEnumerable<CaptionViewModel>
+@{
+    ViewData["Title"] = "Bas hisse";
+}
+
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+   
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <a asp-action="Create" class="m-0 font-weight-bold  btn btn-success">Yeni basliq</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+
+
+
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Veziyyeti</th>
+                            <th>Basliq</th>
+                            <th>Aciqlama</th>
+                            <th>Sekil</th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Veziyyeti</th>
+                            <th>Basliq</th>
+                            <th>Aciqlama</th>
+                            <th>Sekil</th>
+                            <th></th>
+                        </tr>
+
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @if (item.Status)
+                                {
+                                    <span class="badge badge-primary">Aktiv</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-warning">Deaktiv</span>
+                                }
+
+                            </td>
+
+
+                            <td>@item.Title</td>
+                            <td>
+                                @item.Detail
+                            </td>
+                            <td>@item.Photo.Photo</td>
+                            <td class="d-flex justify-content-center ">
+                                <a class="btn btn-info btn-circle btn-sm " asp-action="edit" asp-route-id="@item.Id">
+                                    <i class=" fas fa-pencil-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

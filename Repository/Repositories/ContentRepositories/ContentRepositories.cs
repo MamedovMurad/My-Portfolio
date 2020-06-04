@@ -16,6 +16,13 @@ namespace Repository.Repositeries.ContentRepositories
             _context = context;
         }
 
+        public IEnumerable<Caption> GetCaption()
+        {
+            return _context.Captions.Include("Icons")
+                                    .Include("Photo")
+                                    .ToList();
+        }
+
         public IEnumerable<Caption> GetCaptions()
         {
             return _context.Captions.Include("Icons")
