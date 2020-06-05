@@ -71,12 +71,28 @@ namespace Repository.Repositeries.ContentRepositories
                                       .ToList();
         }
 
+        public IEnumerable<Service> GetService()
+        {
+            return _context.Services
+
+                                 
+                                  .ToList();
+        }
+
         public IEnumerable<Service> GetServices()
         {
             return _context.Services
 
                                    .Where(s => s.Status)
                                    .ToList();
+        }
+
+        public IEnumerable<SkillValue> GetSkill()
+        {
+            return _context.SkillValues
+
+                             
+                                .ToList();
         }
 
         public IEnumerable<SkillValue> GetSkils()

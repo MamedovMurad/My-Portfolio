@@ -14,6 +14,8 @@ namespace Admin.Mapping
         {
             CreateMap<Caption, CaptionViewModel>();
             CreateMap<PersonPhoto, CaptionPhotoViewModel>();
+            CreateMap<Service, ServiceViewModel>();
+            CreateMap<SkillValue, SkillViewModel>();
 
         }
     }
