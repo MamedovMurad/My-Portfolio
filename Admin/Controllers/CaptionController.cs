@@ -28,5 +28,10 @@ namespace Admin.Controllers
             var model = _mapper.Map<IEnumerable<Caption>, IEnumerable<CaptionViewModel>>(list);
             return View(model);
         }
+        public IActionResult Create()
+        {
+
+            return View();
+        }
     }
 }

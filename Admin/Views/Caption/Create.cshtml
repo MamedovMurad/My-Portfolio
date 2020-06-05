@@ -1,0 +1,63 @@
+﻿    @model CaptionViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Yeni başlıq</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        
+        <div class="card-body">
+        
+            <form method="post" class="Dropzone">
+                <div class="form-group">
+                    <label>Veziyyeti</label>
+                    <div class="custom-control custom-radio custom-control-inline ml-3">
+                        <input type="radio" asp-for="Status" value="true" class="custom-control-input" checked="" />
+                        <label class="custom-control-label " asp-for="Status">Aktiv</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline ml-3">
+                        <input type="radio" asp-for="Status" value="false" class="custom-control-input" />
+                        <label class="custom-control-label " asp-for="Status">Deaktiv</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title">başlıq</label>
+                    <input class="form-control form-control-user " asp-for="Title" />
+                    <span class="field-validation-valid" asp-validation-for="Title"></span>
+                </div>
+                  <div class="form-group">
+                      <label asp-for="Detail">Aciqlama</label>
+                    <input class="form-control form-control-user " asp-for="Detail" />
+                    <span class="field-validation-valid" asp-validation-for="Detail"></span>
+                </div>
+
+                <div class="fallback ">
+                    <input name="file" type="file" multiple class="col-12"  style="background-color:Highlight; color:#fff;  height:90px; border-radius:10px"  />
+                </div>
+
+                <div class="form-group d-flex justify-content-end mt-3">
+                    <button type="submit" class="btn btn-primary ">
+                       Qeyde Al
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+@section Scripts{ 
+<script src="~/vendor/dropzone/dropzone.min.js"></script>
+<script>
+    var myDropzone = new Dropzone("divfallback", { url: "/file/post" });
+</script>
+}
+@section Head{ 
+    <link rel="stylesheet" href="~/vendor/dropzone/dropzone.min.js" />
+}
+<!-- /.container-fluid -->

@@ -289,3 +289,5 @@ C:\Users\User\Desktop\My-Portfolio\Admin\obj\Debug\netcoreapp3.1\Admin.pdb
 C:\Users\User\Desktop\My-Portfolio\Admin\obj\Debug\netcoreapp3.1\Razor\Views\Caption\Index.cshtml.g.cs
 C:\Users\User\Desktop\My-Portfolio\Admin\obj\Debug\netcoreapp3.1\Razor\Views\Service\Index.cshtml.g.cs
 C:\Users\User\Desktop\My-Portfolio\Admin\obj\Debug\netcoreapp3.1\Razor\Views\Skill\Index.cshtml.g.cs
+C:\Users\User\Desktop\My-Portfolio\Admin\obj\Debug\netcoreapp3.1\Razor\Views\Caption\Create.cshtml.g.cs
+C:\Users\User\Desktop\My-Portfolio\Admin\bin\Debug\netcoreapp3.1\libman.json

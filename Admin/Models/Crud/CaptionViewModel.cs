@@ -13,6 +13,7 @@ namespace Admin.Models.Crud
         public string Title { get; set; }
         public string Detail { get; set; }
         public PersonPhoto Photo { get; set; }
+        public ICollection<CaptionIcon> Icons { get; set; }
 
     }
 }
